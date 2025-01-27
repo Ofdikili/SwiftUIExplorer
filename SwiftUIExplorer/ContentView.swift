@@ -30,7 +30,7 @@ struct ContentView: View {
                 Button{
                     print("Clicked")
                 }label: {
-                    WeatherButtonView(
+                    WeatherButtonUIView(
                         title: "Change Day Time", backGroundColor: .white, foreGroundColor: .blue
                     )
                 }
@@ -96,19 +96,6 @@ struct MainWeatherStatusView: View {
     }
 }
 
-struct WeatherButtonView: View {
-    var title: String = ""
-    var backGroundColor: Color
-    var foreGroundColor: Color
-    var body: some View {
-        Text(title)
-            .frame(width: 280, height: 50)
-            .background(backGroundColor)
-            .foregroundColor(foreGroundColor)
-            .font(.system(size: 20))
-            .cornerRadius(10)
-    }
-}
 #Preview {
     ContentView()
 }

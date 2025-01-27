@@ -8,11 +8,20 @@
 import SwiftUI
 
 struct WeatherButtonUIView: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
+    
+        var title: String = ""
+        var backGroundColor: Color
+        var foreGroundColor: Color
+        var body: some View {
+            Text(title)
+                .frame(width: 280, height: 50)
+                .background(backGroundColor)
+                .foregroundColor(foreGroundColor)
+                .font(.system(size: 20))
+                .cornerRadius(10)
+        }
 }
 
 #Preview {
-    WeatherButtonUIView()
+    WeatherButtonUIView(title: "Title", backGroundColor: .red, foreGroundColor: .white)
 }
