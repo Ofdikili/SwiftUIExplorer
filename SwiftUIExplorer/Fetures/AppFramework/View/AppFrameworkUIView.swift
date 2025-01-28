@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct AppFrameworkUIView: View {
+    
+    @StateObject var appFrameworkViewModel: AppFrameworkViewModel = AppFrameworkViewModel()
+    
     var sampleFramework: Framework = Framework.getSampleFrameWork()
     var frameworks: [Framework] = Framework.getAllFrameWorks()
     
@@ -24,10 +27,15 @@ struct AppFrameworkUIView: View {
                    ForEach(frameworks , id :\.self){
                        framework in
                        FrameworkTitleView(framework: framework)
+                           .onTapGesture {
+                               appFrameworkViewModel.selectedFramework = framework
+                           }
                    }
                }
            }.navigationTitle("Frameworks")
-            
+                .sheet(isPresented: $appFrameworkViewModel.isShowingDetailView){
+                    FrameWorkDetailUIView(frameWork: appFrameworkViewModel.selectedFramework!,isShowDetailView: $appFrameworkViewModel.isShowingDetailView)
+                }
         }
     }
 }

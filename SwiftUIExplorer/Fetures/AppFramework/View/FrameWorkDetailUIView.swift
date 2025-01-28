@@ -9,11 +9,15 @@ import SwiftUI
 
 struct FrameWorkDetailUIView : View {
     var frameWork: Framework
+    @Binding var isShowDetailView: Bool
     var body: some View {
         VStack{
             HStack{
                 Spacer()
-                Button{} label: {
+                Button{
+                    isShowDetailView.toggle()
+
+                } label: {
                     Image(systemName: "xmark")
                         .foregroundColor(.primary)
                         .imageScale(.large)
@@ -26,7 +30,8 @@ struct FrameWorkDetailUIView : View {
                 .font(.body)
                 .padding()
             Spacer()
-            Button{} label: {
+            Button{
+            } label: {
                 Text("Learn More")
                     .font(.title2)
                     .frame(width: 280, height: 50)
@@ -40,5 +45,5 @@ struct FrameWorkDetailUIView : View {
 
 #Preview {
     var sampleFramework: Framework = Framework.getSampleFrameWork()
-    FrameWorkDetailUIView(frameWork: sampleFramework)
+    FrameWorkDetailUIView(frameWork: sampleFramework, isShowDetailView:.constant(false))
 }
