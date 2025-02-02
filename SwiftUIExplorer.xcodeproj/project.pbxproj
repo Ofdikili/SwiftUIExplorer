@@ -6,10 +6,6 @@
 	objectVersion = 77;
 	objects = {
 
-/* Begin PBXBuildFile section */
-		78E8BA562D4FBFC900EE0976 /* SafariView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E8BA552D4FBFC900EE0976 /* SafariView.swift */; };
-/* End PBXBuildFile section */
-
 /* Begin PBXContainerItemProxy section */
 		78268D012D467E440035E83D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -31,7 +27,6 @@
 		78268CEF2D467E430035E83D /* SwiftUIExplorer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIExplorer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		78268D002D467E440035E83D /* SwiftUIExplorerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftUIExplorerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		78268D0A2D467E440035E83D /* SwiftUIExplorerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftUIExplorerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		78E8BA552D4FBFC900EE0976 /* SafariView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -80,7 +75,6 @@
 		78268CE62D467E430035E83D = {
 			isa = PBXGroup;
 			children = (
-				78E8BA552D4FBFC900EE0976 /* SafariView.swift */,
 				78268CF12D467E430035E83D /* SwiftUIExplorer */,
 				78268D032D467E440035E83D /* SwiftUIExplorerTests */,
 				78268D0D2D467E440035E83D /* SwiftUIExplorerUITests */,
@@ -242,7 +236,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				78E8BA562D4FBFC900EE0976 /* SafariView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

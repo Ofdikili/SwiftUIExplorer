@@ -31,7 +31,7 @@ struct FrameWorkDetailUIView : View {
                 .font(.body)
                 .padding()
             Spacer()
-            Button{
+         /*   Button{
                 isShowSafariView = true
             } label: {
                 Text("Learn More")
@@ -40,7 +40,17 @@ struct FrameWorkDetailUIView : View {
                     .background(.red)
                     .foregroundStyle(.white)
                     .cornerRadius(10)
+            }*/
+            Button{isShowSafariView = true} label: {
+                Label("Learn More",systemImage:"book.fill")
+                    
             }
+            .buttonStyle(.borderedProminent)
+            .controlSize(.large)
+            .foregroundStyle(.yellow)
+            .buttonBorderShape(.roundedRectangle(radius: 20))
+            .tint(.red)
+            
         }.fullScreenCover(isPresented: $isShowSafariView, content: {
             SafariView(url: URL(string:frameWork.urlString)!)
         }
