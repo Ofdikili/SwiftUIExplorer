@@ -8,10 +8,11 @@
 import SwiftUI
 
 struct BarcodeScannerUIView: View {
+    @State private var scannedCode : String = ""
     var body: some View {
         NavigationView {
             VStack(alignment:.center){
-                Rectangle()
+                ScannerView(scannedCode: $scannedCode)
                     .frame(maxWidth:.infinity, maxHeight: 300)
                 Spacer().frame(height: 60)
                 Label("Scanned Barcode:",systemImage: "barcode.viewfinder")
