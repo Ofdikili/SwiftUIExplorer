@@ -39,6 +39,11 @@ struct ContentView: View {
                             .customButtonStyle()
                     }
                     
+                    NavigationLink(destination: BarcodeScannerUIView()) {
+                        Text("Barcode Scanner")
+                            .customButtonStyle()
+                    }
+                    
                 }
             }
         }
